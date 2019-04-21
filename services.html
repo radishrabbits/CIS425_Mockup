@@ -3,6 +3,10 @@
 <head>
     <title>Pet Specialist Services</title>
     <link rel="stylesheet" href="bootstrap-css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="db-handler.js"></script>
 
 </head>
 
@@ -29,3 +33,44 @@
     </nav>
     
     <br>
+    <div class="container">
+        <div class="row">
+            <p>We offer a variety of different services for your pets. Select a service below to learn more!</p>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-md-4">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a service</button>
+                <div class="dropdown-menu" aria-labelledby="serviceSelector" id="service">
+                    <a class="dropdown-item" href="#" id="1">Basic Cut</a>
+                    <a class="dropdown-item" href="#" id="2">Nail Trim</a>
+                    <a class="dropdown-item" href="#" id="5">Basic Wash</a>
+                    <a class="dropdown-item" href="#" id="4">Massage</a>
+                    <a class="dropdown-item" href="#" id="3">Spa Treatment</a>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Service</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Estimated # of Hours</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" id="namedisp">test</th>
+                        <td id="pricedisp">test2</td>
+                        <td id="descdisp">t3</td>
+                        <td id="hrsdisp">t4</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
