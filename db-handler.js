@@ -23,6 +23,7 @@ MySql.Execute(
 		//console.log(dataAsJSON[0]);
 		// Add an empty <tr> element at the last position of the table
 		var row = table.insertRow(-1);
+		row.id = "row" + dataAsJSON[i]["ServiceID"];
 
 		// Add empty cells for all the info we need to show
 		var cellName = row.insertCell(0);

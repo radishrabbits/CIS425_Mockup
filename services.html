@@ -11,9 +11,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="db-handler.js"></script>
-    <!--<script src="functions.js"></script>-->
     <link rel="icon"  href="images/icon.ico" type="image/x-icon">
-
+	<script>
+		function showme(id){
+			console.log(id);
+			var table = document.getElementById("services-table");
+			for(var i = 0, row; row = table.rows[i]; i++){
+				row.style.display = 'none';
+			}
+			
+			document.getElementById('headers').style.display = '';
+			id.style.display = '';
+		}
+	</script>
 
 </head>
 
@@ -50,18 +60,18 @@
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a service</button>
                 <div class="dropdown-menu" aria-labelledby="serviceSelector" id="service">
-                    <a class="dropdown-item" href="#" id="1">Basic Cut</a>
-                    <a class="dropdown-item" href="#" id="2">Nail Trim</a>
-                    <a class="dropdown-item" href="#" id="5">Basic Wash</a>
-                    <a class="dropdown-item" href="#" id="4">Massage</a>
-                    <a class="dropdown-item" href="#" id="3">Spa Treatment</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row1)" id="1">Basic Cut</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row2)" id="2">Nail Trim</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row5)" id="5">Basic Wash</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row4)" id="4">Massage</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row3)" id="3">Spa Treatment</a>
                 </div>
             </div>
         </div>
             <div class="col-md-6">
                 <table class="table" id="services-table">
                     <thead>
-                        <tr>
+                        <tr id="headers">
                             <th scope="col">Service</th>
                             <th scope="col">Price</th>
                             <th scope="col">Description</th>
@@ -69,12 +79,7 @@
                         </tr>
                     </thead>
                 <tbody>
-                    <!--<tr>
-                        <th scope="row" id="namedisp">test</th>
-                        <td id="pricedisp">test2</td>
-                        <td id="descdisp">t3</td>
-                        <td id="hrsdisp">t4</td>
-                    </tr>-->
+				<!-- This is where the table gets populated automatically. -->
                 </tbody>
                 </table>
             </div>
