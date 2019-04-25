@@ -23,6 +23,7 @@
 			document.getElementById('headers').style.display = '';
 			id.style.display = '';
 		}
+        
 	</script>
 
 </head>
@@ -59,12 +60,13 @@
         <div class="col-md-4">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a service</button>
-                <div class="dropdown-menu" aria-labelledby="serviceSelector" id="service">
+                <div class="dropdown-menu active" aria-labelledby="serviceSelector" id="service">
                     <a class="dropdown-item" href="#" onclick="showme(row1)" id="1">Basic Cut</a>
                     <a class="dropdown-item" href="#" onclick="showme(row2)" id="2">Nail Trim</a>
                     <a class="dropdown-item" href="#" onclick="showme(row5)" id="5">Basic Wash</a>
                     <a class="dropdown-item" href="#" onclick="showme(row4)" id="4">Massage</a>
                     <a class="dropdown-item" href="#" onclick="showme(row3)" id="3">Spa Treatment</a>
+                    <a class="dropdown-item" href="#">Full List</a>
                 </div>
             </div>
         </div>
@@ -76,6 +78,8 @@
                             <th scope="col">Price</th>
                             <th scope="col">Description</th>
                             <th scope="col">Estimated # of Hours</th>
+                            <th scope="col">Tax + Service Fees</th>
+                            <th scope="col">Total Price</th>
                         </tr>
                     </thead>
                 <tbody>

@@ -7,6 +7,7 @@
 
 body{
     font-family: 'Londrina Solid', cursive;
+    background-image:url(images/backdrop.png);
 }
 
 .card {

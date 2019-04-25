@@ -30,12 +30,16 @@ MySql.Execute(
 		var cellPrice = row.insertCell(1);
 		var cellDesc = row.insertCell(2);
 		var cellHrs = row.insertCell(3);
+        var cellFees = row.insertCell(4);
+        var cellTotal = row.insertCell(5);
 
 		// Populate the cells
 		cellName.innerHTML = dataAsJSON[i]["Name"];
 		cellPrice.innerHTML = dataAsJSON[i]["Price"];
 		cellDesc.innerHTML = dataAsJSON[i]["Desc"];
 		cellHrs.innerHTML = dataAsJSON[i]["EstimatedTime"];
+        cellFees.innerHTML = dataAsJSON[i]["TaxesAndFees"];
+        cellTotal.innerHTML = dataAsJSON[i]["TotalPrice"];
 
 		// Set the id of the field
 		cellName.id = "namedisp";
