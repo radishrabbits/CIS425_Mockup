@@ -25,6 +25,12 @@
 		}
         
 	</script>
+    
+    <script>
+        function setactive(id){
+            var selected = document.getElementById(id).innerHTML;
+            document.getElementById("serviceSelector").innerHTML = selected;
+    </script>
 
 </head>
 
@@ -61,11 +67,11 @@
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a service</button>
                 <div class="dropdown-menu active" aria-labelledby="serviceSelector" id="service">
-                    <a class="dropdown-item" href="#" onclick="showme(row1)" id="1">Basic Cut</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row2)" id="2">Nail Trim</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row5)" id="5">Basic Wash</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row4)" id="4">Massage</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row3)" id="3">Spa Treatment</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row1); setactive(1)" id="1">Basic Cut</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row2); setactive(2)" id="2">Nail Trim</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row5); setactive(5)" id="5">Basic Wash</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row4); setactive(4)" id="4">Massage</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row3); setactive(3)" id="3">Spa Treatment</a>
                     <a class="dropdown-item" href="#">Full List</a>
                 </div>
             </div>
