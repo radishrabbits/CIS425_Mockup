@@ -35,17 +35,19 @@ MySql.Execute(
 
 		// Populate the cells
 		cellName.innerHTML = dataAsJSON[i]["Name"];
-		cellPrice.innerHTML = dataAsJSON[i]["Price"];
+		cellPrice.innerHTML ="$" + dataAsJSON[i]["Price"].toFixed(2);
 		cellDesc.innerHTML = dataAsJSON[i]["Desc"];
 		cellHrs.innerHTML = dataAsJSON[i]["EstimatedTime"];
-        cellFees.innerHTML = dataAsJSON[i]["TaxesAndFees"];
-        cellTotal.innerHTML = dataAsJSON[i]["TotalPrice"];
+        cellFees.innerHTML = "$" + dataAsJSON[i]["TaxAndFees"].toFixed(2);
+        cellTotal.innerHTML = "$" + dataAsJSON[i]["Total"].toFixed(2);
 
 		// Set the id of the field
 		cellName.id = "namedisp";
 		cellPrice.id = "pricedisp";
 		cellDesc.id = "descdisp";
 		cellHrs.id = "hrsdisp";
+        cellFees.id = "feesdisp";
+        cellTotal.id = "totaldisp";
 	}
   }
 );
