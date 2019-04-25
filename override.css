@@ -8,3 +8,7 @@
 body{
     font-family: 'Londrina Solid', cursive;
 }
+
+.card {
+    border:none;
+}
