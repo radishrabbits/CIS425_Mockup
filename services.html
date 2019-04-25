@@ -27,10 +27,20 @@
 	</script>
     
     <script>
-        function setactive(id){
+        function setactivetext(id){
             var selected = document.getElementById(id).innerHTML;
+            console.log(selected);
             document.getElementById("serviceSelector").innerHTML = selected;
+        }
     </script>
+    
+    <script>
+    function showall(){
+    var table = document.getElementById("services-table");
+			for(var i = 0, row; row = table.rows[i]; i++){
+				row.style.display = '';
+			}
+    }</script>
 
 </head>
 
@@ -67,12 +77,12 @@
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a service</button>
                 <div class="dropdown-menu active" aria-labelledby="serviceSelector" id="service">
-                    <a class="dropdown-item" href="#" onclick="showme(row1); setactive(1)" id="1">Basic Cut</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row2); setactive(2)" id="2">Nail Trim</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row5); setactive(5)" id="5">Basic Wash</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row4); setactive(4)" id="4">Massage</a>
-                    <a class="dropdown-item" href="#" onclick="showme(row3); setactive(3)" id="3">Spa Treatment</a>
-                    <a class="dropdown-item" href="#">Full List</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row1); setactivetext(1)" id="1">Basic Cut</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row2); setactivetext(2)" id="2">Nail Trim</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row5); setactivetext(5)" id="5">Basic Wash</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row4); setactivetext(4)" id="4">Massage</a>
+                    <a class="dropdown-item" href="#" onclick="showme(row3); setactivetext(3)" id="3">Spa Treatment</a>
+                    <a class="dropdown-item" href="#" onclick="showall(); setactivetext(6)" id="6">Full List</a>
                 </div>
             </div>
             <br>
